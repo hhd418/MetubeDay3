@@ -1,8 +1,5 @@
 <ul> List of Awesome Clips
 	<% @videos.each do |video| %>
-
-	<li><%= link_to video.title, video_path(video.id) %></li>
-
+		<li><%= link_to video.title, video_url(video.id) %></li>
 	<% end %>
-
 </ul>

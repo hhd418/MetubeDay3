@@ -2,4 +2,12 @@
 
 <iframe width="420" height="315" src="//www.youtube.com/embed/<%=@video.youtube_id%>" frameborder="0" allowfullscreen></iframe>
 
-<p><%= link_to 'back', videos_url %></p>
+<p><%= link_to 'Index', videos_url %></p>
+
+<% if @video.id != @last.id %>
+	<p><%= link_to 'Next', video_url(@video.id + 1) %></p>
+<% end %>
+
+<% if @video.id != @first.id %>
+	<p><%= link_to 'Previous', video_url(@video.id - 1) %></p>
+<% end %>
