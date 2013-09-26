@@ -1,5 +1,9 @@
 <ul> List of Awesome Clips
 	<% @videos.each do |video| %>
 		<li><%= link_to video.title, video_url(video.id) %></li>
+		<ul>
+			<li>Description: <%= video.snippet %></li>
+			<li>Rating: <%= video.random %></li>
+		</ul>
 	<% end %>
 </ul>

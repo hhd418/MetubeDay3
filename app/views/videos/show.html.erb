@@ -2,6 +2,15 @@
 
 <iframe width="420" height="315" src="//www.youtube.com/embed/<%=@video.youtube_id%>" frameborder="0" allowfullscreen></iframe>
 
+<h2>Rating: <%= @video.random %></h2>
+
+
+<h4>Description:</h4>
+<p><%= @video.description %></p>
+
+<h4>Uploaded By:</h4>
+<p><%= @video.uploader_name %></p>
+
 <p><%= link_to 'Index', videos_url %></p>
 
 <% if @video.id != @last.id %>
